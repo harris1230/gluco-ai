@@ -1,0 +1,214 @@
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeUp 0.5s ease 0.1s both;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 100px;
+  width: fit-content;
+}
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: blink 1.5s infinite;
+  flex-shrink: 0;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.metricCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.metricCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-color, var(--accent));
+  border-radius: 14px 14px 0 0;
+}
+
+.metricHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+.metricIcon {
+  font-size: 1rem;
+}
+.metricValue {
+  font-family: var(--font-mono);
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+.metricUnit {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.metricStatus {
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.gauge {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+.gaugeTrack {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.gaugeFill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gaugeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+.reference {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.pulseAnim {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 50px;
+  margin: 0.4rem 0;
+}
+.pulseBeat {
+  width: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  animation: fadeIn 0.4s ease both;
+}
+
+.graphSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.graphLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+.graphWrap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.01);
+}
+.graph {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.disclaimer {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1.2rem;
+  background: rgba(255, 165, 0, 0.04);
+  border: 1px solid rgba(255, 165, 0, 0.15);
+  border-radius: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  align-items: flex-start;
+}
+.disclaimer span {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.disclaimer strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+  .panel {
+    padding: 1.5rem;
+  }
+  .metricValue {
+    font-size: 2.2rem;
+  }
+}

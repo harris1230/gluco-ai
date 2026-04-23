@@ -1,0 +1,84 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(5, 10, 14, 0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 65px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+.logoIcon {
+  color: var(--accent);
+}
+.logoAi {
+  color: var(--accent);
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  border: 1px solid var(--border-bright);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.email {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.logoutBtn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.logoutBtn:hover {
+  color: var(--red);
+  border-color: rgba(255, 77, 109, 0.4);
+  background: var(--red-dim);
+}
+@media (max-width: 500px) {
+  .email {
+    display: none;
+  }
+  .nav {
+    padding: 1rem 1.25rem;
+  }
+}

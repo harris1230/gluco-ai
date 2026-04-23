@@ -1,0 +1,67 @@
+# ----------------------------
+# 🔐 Python / Backend
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# ----------------------------
+# 📦 ML Models & Data
+# ----------------------------
+*.h5
+*.keras
+*.pkl
+*.joblib
+*.save
+test_pred.py
+# Large datasets
+dataset/
+videos/
+uploads/
+
+# ----------------------------
+# 🔥 Flask
+# ----------------------------
+instance/
+.webassets-cache
+
+# ----------------------------
+# 🌐 Frontend (React)
+# ----------------------------
+frontend/node_modules/
+frontend/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------------------
+# 🖥️ OS / Editor
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# ----------------------------
+# 🔑 Secrets
+# ----------------------------
+.env
+.env.local
+.env.*.local
+
+# ----------------------------
+# Misc
+# ----------------------------
+*.log
+*.tmp

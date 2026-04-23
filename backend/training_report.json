@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-04-10T23:56:12.173117",
+  "dataset_size": 16,
+  "augmented_size": 144,
+  "signal_length": 120,
+  "num_features_standard": 11,
+  "num_features_enhanced": 28,
+  "feature_names": [
+    "mean",
+    "std",
+    "max",
+    "min",
+    "skewness",
+    "kurtosis",
+    "hrv",
+    "avg_interval",
+    "peak_density",
+    "mean_peak_amp",
+    "peak_regularity",
+    "energy",
+    "signal_range",
+    "rms",
+    "spectral_entropy",
+    "dominant_freq",
+    "lf_hf_ratio",
+    "total_power",
+    "mean_rise_time",
+    "mean_fall_time",
+    "mean_pulse_width",
+    "mean_peak_sharpness",
+    "sample_entropy",
+    "zero_crossing_rate",
+    "sdnn",
+    "rmssd",
+    "pnn50",
+    "cv_rr"
+  ],
+  "standard_model": {
+    "mae": 5.032489776611328,
+    "rmse": 7.368725192454531
+  },
+  "enhanced_model": {
+    "mae": 5.641948223114014,
+    "rmse": 6.6935138222624415,
+    "r2": 0.9574378728866577
+  },
+  "hyperparameters": {
+    "epochs": 200,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "dropout": 0.35,
+    "l2_reg": 0.0001,
+    "augmentation_factor": 8,
+    "n_folds": 4
+  },
+  "improvement_pct": -12.11047560066918
+}

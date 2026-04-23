@@ -1,0 +1,249 @@
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  animation: fadeUp 0.5s ease both;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.sub {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.tip {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dropZone {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: rgba(255, 255, 255, 0.01);
+}
+.dropZone:hover,
+.dropZone.dragging {
+  border-color: var(--border-bright);
+  background: var(--accent-dim);
+}
+.dropZone.hasFile {
+  border-style: solid;
+  border-color: var(--border-bright);
+  background: var(--accent-dim);
+  padding: 1.5rem 2rem;
+}
+
+.dropContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.dropIconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  border: 1px solid var(--border-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropIcon {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+.dropText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+.dropText strong {
+  color: var(--text-primary);
+}
+.dropHint {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+.fileIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(0, 200, 180, 0.1);
+  border: 1px solid var(--border-bright);
+  color: var(--accent);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.fileName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fileSize {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+.removeFile {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.removeFile:hover {
+  color: var(--red);
+  border-color: rgba(255, 77, 109, 0.4);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: var(--red-dim);
+  border: 1px solid rgba(255, 77, 109, 0.3);
+  color: var(--red);
+  animation: fadeIn 0.3s ease;
+}
+
+.progressWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.progressBar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 100px;
+  transition: width 0.4s ease;
+}
+.progressStep {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.progressDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: blink 0.8s infinite;
+  flex-shrink: 0;
+}
+
+.analyzeBtn {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--bg-base);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 54px;
+}
+.analyzeBtn:hover:not(:disabled) {
+  box-shadow: 0 0 40px var(--accent-glow);
+  transform: translateY(-2px);
+}
+.analyzeBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(5, 10, 14, 0.3);
+  border-top-color: var(--bg-base);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: 1.5rem;
+  }
+  .dropZone {
+    padding: 2rem 1rem;
+  }
+}

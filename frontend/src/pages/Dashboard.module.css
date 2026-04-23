@@ -1,0 +1,103 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.glow1 {
+  position: fixed;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 200, 180, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.glow2 {
+  position: fixed;
+  bottom: -200px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(78, 255, 219, 0.04) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(5, 10, 14, 0.6);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 65px;
+  z-index: 80;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  bottom: -1px;
+}
+.tab:hover {
+  color: var(--text-secondary);
+}
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.tabIcon {
+  font-size: 0.9rem;
+}
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid var(--border-bright);
+  border-radius: 100px;
+  padding: 0.1rem 0.45rem;
+}
+
+.main {
+  flex: 1;
+  padding: 2.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  animation: fadeUp 0.4s ease both;
+}
+.scanLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    padding: 0 1rem;
+  }
+  .main {
+    padding: 1.5rem 1rem;
+  }
+}
